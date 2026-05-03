@@ -53,6 +53,7 @@ app.include_router(user.router, prefix="/api/v1/user", tags=["user"])
 app.include_router(github.router, prefix="/api/v1", tags=["github"])
 
 @app.get("/")
+@app.head("/")
 def read_root():
     return {"status": "ok", "service": "AI Project Estimator API"}
 
